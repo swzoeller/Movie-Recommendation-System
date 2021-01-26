@@ -33,6 +33,11 @@ MANIFEST
 *.manifest
 *.spec
 
+# large files
+title.basics.tsv.gz
+title.crew.tsv.gz
+title.principals.tsv.gz
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
