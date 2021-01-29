@@ -12,6 +12,14 @@ Netflix has hired SCJ consulting to build a movie recommendation system to use f
 - Features of the dataset included User IDs, Movie IDs, Ratings, Release Year, Runtime, Director(s), and Genre(s)
 - The mean rating is 3.50, and the standard deviation is 1.04.
 
+### Exploratory Data Analysis (EDA)
+<img src="https://github.com/swzoeller/Movie-Recommendation-System/blob/main/Images/num_v_rating.png" width="400" height="400"/>
+- Frequently rated movies were rated higher on average
+
+<img src="https://github.com/swzoeller/Movie-Recommendation-System/blob/main/Images/top_mov.png" width="400" height="400"/>
+- Over 6000 movies had less than 5 ratings, while others had upwards of 300, potentially resulting in popularity bias
+
+
 ### Modeling Process
 - KNN Basic from the Surprise library was used as a baseline
   - Baseline RMSE: 0.97 
@@ -22,7 +30,11 @@ Netflix has hired SCJ consulting to build a movie recommendation system to use f
 ![Predicted Average Rating per User vs Actual Average Rating per User](https://github.com/swzoeller/Movie-Recommendation-System/blob/main/Images/act_pred.png)
 
 ### Recommendation Function
-![Recommendation Function Sample](https://github.com/swzoeller/Movie-Recommendation-System/blob/main/Images/recommend_function.png)
+![Recommendation Function Sample](https://github.com/swzoeller/Movie-Recommendation-System/blob/main/Images/recommend_fx.png)
+
+### Conclusions
+- The final model is not a perfect fit based on the RMSE (0.87), but is less than the standard deviation of the original ratings dataset (1.05)
+- Recommendations appear to be more accurate when genre is specified
 
 ### Future Steps and Limitations
 - Obtain reviews for movies that do not have a sufficient amount of reviews to be deemed reliable to the dataset or consider removing from model
